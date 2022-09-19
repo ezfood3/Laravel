@@ -45,3 +45,13 @@ Route::get(
     '/logout',
     [App\Http\Controllers\LoginController::class, 'logout']
 )->middleware('auth')->name('logout');
+
+/* 
+Route::HTTP요청메서드(
+    요청URL,
+    클로저, 컨트롤러
+)
+
+클로저 : function(){ return 응답객체; }
+컨트롤러 : [클래스명::class,'메서드명']
+*/
