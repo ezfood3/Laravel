@@ -59,3 +59,6 @@ Route::HTTP요청메서드(
         [클래스명::class,] -> 클래스: 액션 클래스 (~~~Action)
         '클래스명'-> 클레스에 작성되어 있는 __invoke메서드 실행
 */
+
+Route::get('/user', ['App\Http\Controllers\UserController::class', 'index']);
+Route::post('/user', ['App\Http\Controllers\UserController::class', 'store']);
