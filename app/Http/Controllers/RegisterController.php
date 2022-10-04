@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers; // 자바의 패키지 개념
 
-use App\Models\User; // 자바의 import와 유사
+// 자바의 import와 유사
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash; // 암호화를 위해서
 use Illuminate\Auth\Events\Registered;
