@@ -27,4 +27,9 @@ class UserController extends Controller
     public function userDetail(string $id): ViewFactory {
         return new Res(view('user.detail'), Res::HTTP_OK);
     }
+
+    public function register(UserRegistPost $request) {
+        $name = $request->get('name');
+        $age = $request->get('age');
+    }
 }
