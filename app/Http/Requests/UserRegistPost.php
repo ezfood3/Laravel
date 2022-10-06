@@ -26,8 +26,19 @@ class UserRegistPost extends FormRequest
     {
         return [
             // validation rules : 유효성 체크(검사)의 규칙을 작성
-            "name" => "required",
-            "age" => "integer",
+            "name" => ['required','max:20'],
+            "email" => ['required','email','max:255'],
+            // "age" => 'integer|min:19',
         ];
+    }
+
+    public function messages(){
+        return [
+            'name.required' => '이름 입력 필수',
+            'name.max' => '이름 최대길이 20',
+            'email.required' => '이메일 입력 필수',
+            'email.email' => '이메일 형식으로 입력',
+            'email.max' => '최대 길이 255 까지',
+        ]
     }
 }

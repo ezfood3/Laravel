@@ -7,7 +7,16 @@
   <title>회원가입페이지</title>
 </head>
 <body>
-  <form name="registform" action="/register" method="post" id="registform">
+  <h1>사용자등록폼</h1>
+  <ul>
+    @if (count($errors)>0)
+      @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+      @endforeach
+    @endif
+  </ul>
+  {# <form name="registform" action="/register" method="post" id="registform"> #}
+  <form name="registform" action="/uregist" method="post" id="registform">
     {{ csrf_field() }}
     <!-- @csrf -->
     <dl>

@@ -8,6 +8,7 @@ use Illuminate\Contracts\View\Factory as ViewFactory;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Http\Response as Res;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash; // 암호화를 위해서
 
 class UserController extends Controller
 {
@@ -30,6 +31,16 @@ class UserController extends Controller
 
     public function register(UserRegistPost $request) {
         $name = $request->get('name');
-        $age = $request->get('age');
+        $email = $request->get('email');
+        $password = $request->get('password');
+
+        $user = User::create(
+            [
+                'name' => $name,
+                'email' => $email,
+                'password' => Hash::make($password),
+            ]
+        );
+        return view('regist.complete', compact('user'));
     }
 }

@@ -62,3 +62,6 @@ Route::HTTP요청메서드(
 
 Route::get('/user', ['App\Http\Controllers\UserController::class', 'index']);
 Route::post('/user', ['App\Http\Controllers\UserController::class', 'store']);
+
+Route::get('/uregist','App\Http\Controllers\UserController@register');
+Route::post('/uregist','App\Http\Controllers\UserController@register');
