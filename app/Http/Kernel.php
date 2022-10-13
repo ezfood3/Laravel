@@ -13,7 +13,8 @@ class Kernel extends HttpKernel
      *
      * @var array<int, class-string|string>
      */
-    protected $middleware = [
+    protected $middleware = [ // 미들웨어 등록
+        // 기본적으로 주석처리 되어있음, 필요시 주석제거후 사용
         // \App\Http\Middleware\TrustHosts::class,
         \App\Http\Middleware\TrustProxies::class,
         \Illuminate\Http\Middleware\HandleCors::class,
