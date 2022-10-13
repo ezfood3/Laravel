@@ -71,3 +71,4 @@ Route::get('/text',App\Http\Controllers\TextAction::class);
 Route::get('/view',App\Http\Controllers\ViewAction::class);
 Route::get('/json',App\Http\Controllers\JsonAction::class);
 Route::get('/download',App\Http\Controllers\DownloadAction::class);
+Route::get('/stream',App\Http\Controllers\StreamAction::class);
