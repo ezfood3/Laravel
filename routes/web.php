@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\TextAction;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,3 +66,8 @@ Route::post('/user', ['App\Http\Controllers\UserController::class', 'store']);
 
 Route::get('/uregist','App\Http\Controllers\UserController@register');
 Route::post('/uregist','App\Http\Controllers\UserController@register');
+
+Route::get('/text',App\Http\Controllers\TextAction::class);
+Route::get('/view',App\Http\Controllers\ViewAction::class);
+Route::get('/json',App\Http\Controllers\JsonAction::class);
+Route::get('/download',App\Http\Controllers\DownloadAction::class);
