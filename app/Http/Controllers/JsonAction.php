@@ -15,7 +15,6 @@ class JsonAction extends Controller
         $res_json = $request->json('nested');
 
         // 비즈니스 로직 호출
-
         // $response = response()->json(['status' => 'success','req_nested' => $res_json]);
         $response = response()->jsonp('callback3',['status' => 'success','req_nested' => $res_json]);
         return $response;
